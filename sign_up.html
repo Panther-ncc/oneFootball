@@ -13,67 +13,76 @@
 </video>
 
 <body>
-    <div class="nav-bar">
+    <div id="topnav" class="navbar">
         <img src="logo.png"
-            alt="Logo">
+        alt="Logo">
+        <a href="#" class="logo">
+            One
+            <span style="color: greenyellow">Football</span>
+        </a>
+        <div class="navbar-right menu">
+            <a href="main.html" class="active">
+                Home
+            </a>
 
-        <div id="menu" class="menu-bar-right">
-            <span onclick="myFunction()">&#9776;</span>
-            <ul>
-                <li><a href="matches.html">Matches</a></li>
-                <li><a href="league.html">Leagues</a></li>
-                <li><a href="transfers.html">Transfers</a></li>
-            </ul>
+            <a href="#">
+                Leagues
+            </a>
+            <a href="picstrial.html">
+                Photos
+            </a>
+            <a href="#">
+                Videos
+            </a>
+        </div>
+        <div class="navbar-right">
+            <a href="javascript:void(0);" class="icon" onclick="showMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
     </div>
     <div id=papa>
-    <div id=parent_all>
-        <div>
-            <h1>OneFootball.com</h1>
-        </div>
-        <div id="form_parent">
-            <form action="db.php" method="POST">
+        <div id=parent_all>
+            <div>
+                <h1>OneFootball.com</h1>
+            </div>
+            <div id="form_parent">
+                <form action="db.php" method="POST">
 
-                <div><label for="uname" class="labels">Create a Username:</label></div>
-                <div><input id="uname" class="input_box" type="text" width="100" placeholder="Type your username"
-                        name="uname" required>
-                </div>
-                <div><label for="pwd" class="lables">Create a Password:</label></div>
-                <div>
-                    <input id="pwd" class="input_box" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" width="100" placeholder="Type your password"
-                        name="pwd" required>
-                </div>
+                    <div><label for="uname" class="labels">Create a Username:</label></div>
+                    <div><input id="uname" class="input_box" type="text" width="100" placeholder="Type your username"
+                            name="uname" required>
+                    </div>
+                    <div><label for="pwd" class="lables">Create a Password:</label></div>
+                    <div>
+                        <input id="pwd" class="input_box" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                            width="100" placeholder="Type your password" name="pwd" required>
+                    </div>
 
-                <div id="button_parent">
-                    <button type="submit">Submit</button>
-                    <button type="reset">Reset </button>
-                </div>
-            </form>
-        </div>
-        <div>
-            <p>Already have a account login <a href="login_page.html">here</a> </p>
+                    <div id="button_parent">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset </button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <p>Already have a account login <a href="login_page.html">here</a> </p>
+            </div>
         </div>
     </div>
-</div>
-<script>
-    function myFunction() {
-        var x = document.getElementById("menu");
-        if (x.style.display == "block") {
-            x.style.display == "none";
-        }
-        else {
-            x.style.display == "block";
-        }
+    <script>
+
         function validateForm() {
             let x = document.forms["myForm"]["uname"].value;
             let y = document.forms["myForm"]["pwd"].value;
-            if (x == "" || y=="") {
+            if (x == "" || y == "") {
                 alert("Name or password must be filled out");
                 return false;
             }
         }
-    }
-</script>
+
+    </script>
 </body>
 
 </html>
